@@ -4,6 +4,7 @@
 Host *
     PasswordAuthentication no
     IdentityFile ~/.ssh/school
+    AllowUsers ubuntu
     SendEnv LANG LC_*
     HashKnownHosts yes
     GSSAPIAuthentication yes
