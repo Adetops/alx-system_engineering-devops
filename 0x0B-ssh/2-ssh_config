@@ -2,6 +2,7 @@
 # configure ssh not to use password authentication but private key specified
 
 Host *
+    HostName 54.157.188.93
     PasswordAuthentication no
     IdentityFile ~/.ssh/school
     User ubuntu
