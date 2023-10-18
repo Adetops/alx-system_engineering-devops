@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Generate rsa keys with filename web-02
+
+ssh-keygen -t rsa -f web2
