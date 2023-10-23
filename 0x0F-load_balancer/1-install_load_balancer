@@ -7,17 +7,17 @@ apt-get install haproxy=2.8.\*
 cp -a /etc/haproxy/haproxy.cfg{,.original_copy}
 # sudo vim /etc/haproxy/haproxy.cfg
 
-echo "frontend diwamu-frontend
+echo "frontend adetops.tech
 	bind *:80
 	mode http
-	default_backend diwamu-backend
+	default_backend AHO_server
 " | tee -a /etc/haproxy/haproxy.cfg
 
-echo "backend diwamu-backend
+echo "backend AHO_server
 	balance roundrobin
-	server web-01 54.157.188.93:80 check
-	server web-02 34.207.155.107:80 check
+	server 157119-web-01 54.157.188.93:80 check
+	server 157119-web-02 34.207.155.107:80 check
 " | tee -a /etc/haproxy/haproxy.cfg
 echo "ENABLED=1" >> /etc/default/haproxy
 
-service haproxy start
+service haproxy restart
