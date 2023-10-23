@@ -14,8 +14,8 @@ echo "frontend adetops.tech
 
 echo "backend AHO_server
 	balance roundrobin
-	server 157119-web-01 54.157.188.93:80 check
-	server 157119-web-02 34.207.155.107:80 check
+	server 157119-web-01 54.157.188.93
+	server 157119-web-02 34.207.155.107
 " | tee -a /etc/haproxy/haproxy.cfg
 echo "ENABLED=1" > /etc/default/haproxy
 
